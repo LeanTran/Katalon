@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Verify Drag and Drop</description>
-   <name>UIB02</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>2c78b20a-b12e-4b10-bb5c-634a3f066049</testCaseGuid>
-</TestCaseEntity>
