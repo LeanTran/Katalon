@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>UIB-08 - Verify Color and Font</description>
+   <name>UIB08-VerifyColorandFont</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d7e330c1-b340-41f7-9b41-0765913577b0</testCaseGuid>
+</TestCaseEntity>

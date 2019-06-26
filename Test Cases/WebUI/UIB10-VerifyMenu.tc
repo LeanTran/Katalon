@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>verifyMenu</description>
+   <name>UIB10-VerifyMenu</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0a0ae341-e7c9-40c5-be04-077ec49ae84a</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>161ecff9-d170-4c0a-afba-6f1611f54b9d</id>
+      <masked>false</masked>
+      <name>downloadPath</name>
+   </variable>
+</TestCaseEntity>

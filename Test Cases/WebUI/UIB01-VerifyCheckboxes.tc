@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>UIB-01 - Verify Checkboxes</description>
+   <name>UIB01-VerifyCheckboxes</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>acc4bdaa-03a2-4032-80c7-3982eb094d27</testCaseGuid>
+</TestCaseEntity>
