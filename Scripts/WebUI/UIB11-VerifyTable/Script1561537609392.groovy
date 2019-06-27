@@ -18,27 +18,27 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-WebUI.click(findTestObject('Homepage/lnk_Table'))
+WebUI.click(findTestObject('WebUI/Homepage/lnk_Table'))
 
-println(WebUI.getText(findTestObject('General/lbl_Page_Header')))
+println(WebUI.getText(findTestObject('WebUI/General/lbl_Page_Header')))
 
-WebUI.verifyElementText(findTestObject('General/lbl_Page_Header'), 'Data Tables')
+WebUI.verifyElementText(findTestObject('WebUI/General/lbl_Page_Header'), 'Data Tables')
 
-String colHeader = CustomKeywords.'customKeywords.util.getHeaderWithSpecCol'(findTestObject('TablePage/tb_table1'), '3')
+String colHeader = CustomKeywords.'customKeywords.util.getHeaderWithSpecCol'(findTestObject('WebUI/TablePage/tb_table1'), '3')
 
 println('Column header: ' + colHeader)
 
-String r3c2Element = CustomKeywords.'customKeywords.util.getCellValueWithSpecCol'(findTestObject('TablePage/tb_table1'), 
+String r3c2Element = CustomKeywords.'customKeywords.util.getCellValueWithSpecCol'(findTestObject('WebUI/TablePage/tb_table1'), 
     '2', '3')
 
 println('cell value (row 3, column 2) on Table 1: ' + r3c2Element)
 
-String r2c4Element = CustomKeywords.'customKeywords.util.getCellValueWithSpecCol'(findTestObject('TablePage/tb_table1'), 
+String r2c4Element = CustomKeywords.'customKeywords.util.getCellValueWithSpecCol'(findTestObject('WebUI/TablePage/tb_table1'), 
     '4', '2')
 
 println(' cell value (row 2, column 4) on Table 1: ' + r2c4Element)
 
-CustomKeywords.'customKeywords.util.clickSpecHeaderSpecTable'(findTestObject('TablePage/tb_table2'), '3')
+CustomKeywords.'customKeywords.util.clickSpecHeaderSpecTable'(findTestObject('WebUI/TablePage/tb_table2'), '3')
 
 @SetUp
 def setup() {

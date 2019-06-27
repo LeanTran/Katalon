@@ -2,8 +2,6 @@ import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import com.kms.katalon.core.annotation.SetUp as SetUp
-import com.kms.katalon.core.annotation.TearDown as TearDown
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -15,22 +13,11 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.click(findTestObject('WebUI/Homepage/lnk_FileUpload'))
-println(WebUI.getText(findTestObject('WebUI/General/lbl_Page_Header')))
-WebUI.verifyElementText(findTestObject('WebUI/General/lbl_Page_Header'), 'File Uploader')
+response = WS.sendRequest(findTestObject('API/ATC-06-GetaPet'))
 
-WebUI.sendKeys(findTestObject('WebUI/FileUploadPage/btn_ChooseFile'), 'D:\\lantran\\Katalon Jun 2019\\KatalonTestPJ\\Data Files\\Images\\uploadfile.png')
-WebUI.click(findTestObject('WebUI/FileUploadPage/btn_Upload'))
-WebUI.verifyElementText(findTestObject('WebUI/FileUploadPage/lbl_SuccessFileUploadedHeader'), 'File Uploaded!')
+WS.verifyResponseStatusCode(response, 200)
 
-@SetUp
-def setup() {
-    WebUI.openBrowser(GlobalVariable.url)
+WS.verifyElementPropertyValue(response, 'id', 2)
 
-    WebUI.maximizeWindow()
-}
+WS.verifyElementPropertyValue(response, 'name', 'name2')
 
-@TearDown
-def tearDown() {
-    WebUI.closeBrowser()
-}

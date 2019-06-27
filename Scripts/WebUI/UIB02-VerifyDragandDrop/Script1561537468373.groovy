@@ -21,17 +21,17 @@ import com.kms.katalon.core.annotation.Keyword as Keyword
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.Keys as Keys
 
-WebUI.click(findTestObject('Homepage/lnk_DragAndDrop'))
+WebUI.click(findTestObject('WebUI/Homepage/lnk_DragAndDrop'))
 
-println(WebUI.getText(findTestObject('General/lbl_Page_Header')))
+println(WebUI.getText(findTestObject('WebUI/General/lbl_Page_Header')))
 
-WebUI.verifyElementText(findTestObject('General/lbl_Page_Header'), 'Drag and Drop')
+WebUI.verifyElementText(findTestObject('WebUI/General/lbl_Page_Header'), 'Drag and Drop')
 
-CustomKeywords.'html5.dnd.DragAndDropHelper.dragAndDrop'(findTestObject('DragAndDropPage/colA'), findTestObject('DragAndDropPage/colB'))
+CustomKeywords.'html5.dnd.DragAndDropHelper.dragAndDrop'(findTestObject('WebUI/DragAndDropPage/colA'), findTestObject('WebUI/DragAndDropPage/colB'))
 
-WebUI.verifyElementText(findTestObject('DragAndDropPage/lbl_columnA'), 'B')
+WebUI.verifyElementText(findTestObject('WebUI/DragAndDropPage/lbl_columnA'), 'B')
 
-WebUI.verifyElementText(findTestObject('DragAndDropPage/lbl_columnB'), 'A')
+WebUI.verifyElementText(findTestObject('WebUI/DragAndDropPage/lbl_columnB'), 'A')
 
 @SetUp
 def setup() {

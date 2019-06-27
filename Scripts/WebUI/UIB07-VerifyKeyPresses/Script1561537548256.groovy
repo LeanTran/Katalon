@@ -19,23 +19,23 @@ import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-WebUI.click(findTestObject('Homepage/lnk_KeyPresses'))
-println(WebUI.getText(findTestObject('General/lbl_Page_Header')))
-WebUI.verifyElementText(findTestObject('General/lbl_Page_Header'), 'Key Presses')
+WebUI.click(findTestObject('WebUI/Homepage/lnk_KeyPresses'))
+println(WebUI.getText(findTestObject('WebUI/General/lbl_Page_Header')))
+WebUI.verifyElementText(findTestObject('WebUI/General/lbl_Page_Header'), 'Key Presses')
 
-WebUI.sendKeys(findTestObject('KeyPressesPage/frm_input'), ((Keys.TAB) as String))
-println(WebUI.getText(findTestObject('KeyPressesPage/txt_Result')))
-WebUI.verifyElementText(findTestObject('KeyPressesPage/txt_Result'), 'You entered: TAB')
+WebUI.sendKeys(findTestObject('WebUI/KeyPressesPage/frm_input'), ((Keys.TAB) as String))
+println(WebUI.getText(findTestObject('WebUI/KeyPressesPage/txt_Result')))
+WebUI.verifyElementText(findTestObject('WebUI/KeyPressesPage/txt_Result'), 'You entered: TAB')
 
-WebUI.clearText(findTestObject('KeyPressesPage/frm_input'))
-WebUI.sendKeys(findTestObject('KeyPressesPage/frm_input'), Keys.chord(Keys.SHIFT, 'g'))
-println(WebUI.getText(findTestObject('KeyPressesPage/txt_Result')))
-WebUI.verifyElementText(findTestObject('KeyPressesPage/txt_Result'), 'You entered: G')
+WebUI.clearText(findTestObject('WebUI/KeyPressesPage/frm_input'))
+WebUI.sendKeys(findTestObject('WebUI/KeyPressesPage/frm_input'), Keys.chord(Keys.SHIFT, 'g'))
+println(WebUI.getText(findTestObject('WebUI/KeyPressesPage/txt_Result')))
+WebUI.verifyElementText(findTestObject('WebUI/KeyPressesPage/txt_Result'), 'You entered: G')
 
-WebUI.clearText(findTestObject('KeyPressesPage/frm_input'))
-WebUI.sendKeys(findTestObject('KeyPressesPage/frm_input'), ((Keys.ENTER) as String))
-println(WebUI.getText(findTestObject('KeyPressesPage/txt_Result')))
-WebUI.verifyElementText(findTestObject('KeyPressesPage/txt_Result'), 'You entered: ENTER')
+WebUI.clearText(findTestObject('WebUI/KeyPressesPage/frm_input'))
+WebUI.sendKeys(findTestObject('WebUI/KeyPressesPage/frm_input'), ((Keys.ENTER) as String))
+println(WebUI.getText(findTestObject('WebUI/KeyPressesPage/txt_Result')))
+WebUI.verifyElementText(findTestObject('WebUI/KeyPressesPage/txt_Result'), 'You entered: ENTER')
 
 @SetUp
 def setup() {

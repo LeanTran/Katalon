@@ -26,20 +26,20 @@ def tearDown() {
 	WebUI.closeBrowser()
 }
 
+'step 1:hgjhgjh '
+WebUI.click(findTestObject('WebUI/Homepage/lnk_Checkboxes'))
 
-WebUI.click(findTestObject('Homepage/lnk_Checkboxes'))
+println(WebUI.getText(findTestObject('WebUI/General/lbl_Page_Header')))
+'step 2:hgjhgjh '
+WebUI.verifyElementText(findTestObject('WebUI/General/lbl_Page_Header'), 'Checkboxes')
 
-println(WebUI.getText(findTestObject('General/lbl_Page_Header')))
-
-WebUI.verifyElementText(findTestObject('General/lbl_Page_Header'), 'Checkboxes')
-
-TestObject chk_checkbox1 = findTestObject('CheckboxPage/chk_Checkbox1')
-
+TestObject chk_checkbox1 = findTestObject('WebUI/CheckboxPage/chk_Checkbox1')
+'step 3:hgjhgjh '
 WebUI.check(chk_checkbox1)
 
 WebUI.verifyElementChecked(chk_checkbox1, 30)
 
-TestObject chk_checkbox2 = findTestObject('CheckboxPage/chk_Checkbox2')
+TestObject chk_checkbox2 = findTestObject('WebUI/CheckboxPage/chk_Checkbox2')
 
 WebUI.uncheck(chk_checkbox2)
 

@@ -17,25 +17,25 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import org.openqa.selenium.WebDriver as WebDriver
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-WebUI.click(findTestObject('Homepage/lnk_JSAlerts'))
-println(WebUI.getText(findTestObject('General/lbl_Page_Header')))
-WebUI.verifyElementText(findTestObject('General/lbl_Page_Header'), 'JavaScript Alerts')
+WebUI.click(findTestObject('WebUI/Homepage/lnk_JSAlerts'))
+println(WebUI.getText(findTestObject('WebUI/General/lbl_Page_Header')))
+WebUI.verifyElementText(findTestObject('WebUI/General/lbl_Page_Header'), 'JavaScript Alerts')
 
-WebUI.click(findTestObject('JSAlertPage/btn_JSAlert'))
+WebUI.click(findTestObject('WebUI/JSAlertPage/btn_JSAlert'))
 WebDriver driver = DriverFactory.getWebDriver()
 String alertText = driver.switchTo().alert().getText()
 WebUI.verifyEqual(alertText, 'I am a JS Alert')
 WebUI.acceptAlert()
-WebUI.verifyElementText(findTestObject('JSAlertPage/txt_Result'), 'You successfuly clicked an alert')
+WebUI.verifyElementText(findTestObject('WebUI/JSAlertPage/txt_Result'), 'You successfuly clicked an alert')
 
-WebUI.click(findTestObject('JSAlertPage/btn_JSConfirm'))
+WebUI.click(findTestObject('WebUI/JSAlertPage/btn_JSConfirm'))
 WebUI.dismissAlert()
-WebUI.verifyElementText(findTestObject('JSAlertPage/txt_Result'), 'You clicked: Cancel')
+WebUI.verifyElementText(findTestObject('WebUI/JSAlertPage/txt_Result'), 'You clicked: Cancel')
 
-WebUI.click(findTestObject('JSAlertPage/btn_JSPrompt'))
+WebUI.click(findTestObject('WebUI/JSAlertPage/btn_JSPrompt'))
 driver.switchTo().alert().sendKeys('Hello')
 WebUI.acceptAlert()
-WebUI.verifyElementText(findTestObject('JSAlertPage/txt_Result'), 'You entered: Hello')
+WebUI.verifyElementText(findTestObject('WebUI/JSAlertPage/txt_Result'), 'You entered: Hello')
 
 @SetUp
 def setup() {

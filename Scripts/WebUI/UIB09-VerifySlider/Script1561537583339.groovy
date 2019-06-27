@@ -21,11 +21,11 @@ import org.openqa.selenium.By as By
 import org.openqa.selenium.interactions.Actions as Actions
 import org.openqa.selenium.WebElement as WebElement
 
-WebUI.click(findTestObject('Homepage/lnk_Slider'))
-println(WebUI.getText(findTestObject('General/lbl_Page_Header')))
-WebUI.verifyElementText(findTestObject('General/lbl_Page_Header'), 'Horizontal Slider')
+WebUI.click(findTestObject('WebUI/Homepage/lnk_Slider'))
+println(WebUI.getText(findTestObject('WebUI/General/lbl_Page_Header')))
+WebUI.verifyElementText(findTestObject('WebUI/General/lbl_Page_Header'), 'Horizontal Slider')
 
-WebUI.verifyElementPresent(findTestObject('HorizontalSliderPage/sld_SliderContainer'), 30)
+WebUI.verifyElementPresent(findTestObject('WebUI/HorizontalSliderPage/sld_SliderContainer'), 30)
 
 WebDriver driver = DriverFactory.getWebDriver()
 WebElement slider = driver.findElement(By.xpath('//input[@type=\'range\']'))

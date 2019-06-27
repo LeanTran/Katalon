@@ -20,15 +20,15 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import org.openqa.selenium.WebElement as WebElement
 
 
-WebUI.click(findTestObject('Homepage/lnk_Iframe'))
-println(WebUI.getText(findTestObject('General/lbl_Page_Header')))
-WebUI.verifyElementText(findTestObject('General/lbl_Page_Header'), 'An iFrame containing the TinyMCE WYSIWYG Editor')
+WebUI.click(findTestObject('WebUI/Homepage/lnk_Iframe'))
+println(WebUI.getText(findTestObject('WebUI/General/lbl_Page_Header')))
+WebUI.verifyElementText(findTestObject('WebUI/General/lbl_Page_Header'), 'An iFrame containing the TinyMCE WYSIWYG Editor')
 
-WebUI.switchToFrame(findTestObject('IframePage/frm_Iframe'), 30)
-WebUI.verifyElementText(findTestObject('IframePage/txt_htmlContent'), 'Your content goes here.')
+WebUI.switchToFrame(findTestObject('WebUI/IframePage/frm_Iframe'), 30)
+WebUI.verifyElementText(findTestObject('WebUI/IframePage/txt_htmlContent'), 'Your content goes here.')
 
-WebUI.clearText(findTestObject('IframePage/txt_htmlContent'))
-WebElement element = WebUiCommonHelper.findWebElement(findTestObject('IframePage/txt_htmlContent'),30)
+WebUI.clearText(findTestObject('WebUI/IframePage/txt_htmlContent'))
+WebElement element = WebUiCommonHelper.findWebElement(findTestObject('WebUI/IframePage/txt_htmlContent'),30)
 WebUI.executeJavaScript('arguments[0].innerHTML = \'Hello, how are you?\'', Arrays.asList(element))
 
 @SetUp

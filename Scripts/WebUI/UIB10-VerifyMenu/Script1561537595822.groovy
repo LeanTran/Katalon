@@ -19,37 +19,37 @@ import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.WebDriver as WebDriver
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-WebUI.click(findTestObject('Homepage/lnk_Menu'))
+WebUI.click(findTestObject('WebUI/Homepage/lnk_Menu'))
 
-println(WebUI.getText(findTestObject('General/lbl_Page_Header')))
+println(WebUI.getText(findTestObject('WebUI/General/lbl_Page_Header')))
 
-WebUI.verifyElementText(findTestObject('General/lbl_Page_Header'), 'JQueryUI - Menu')
+WebUI.verifyElementText(findTestObject('WebUI/General/lbl_Page_Header'), 'JQueryUI - Menu')
 
-WebUI.click(findTestObject('MenuPage/mnu_Enabled'))
-
-WebUI.delay(1)
-
-WebUI.click(findTestObject('MenuPage/mnu_JQueryUI'))
+WebUI.click(findTestObject('WebUI/MenuPage/mnu_Enabled'))
 
 WebUI.delay(1)
 
-WebUI.verifyElementText(findTestObject('MenuPage/lbl_JQueryUIHeader'), 'JQuery UI')
-
-WebUI.click(findTestObject('MenuPage/lnk_MenuLink'))
+WebUI.click(findTestObject('WebUI/MenuPage/mnu_JQueryUI'))
 
 WebUI.delay(1)
 
-WebUI.verifyElementText(findTestObject('General/lbl_Page_Header'), 'JQueryUI - Menu')
+WebUI.verifyElementText(findTestObject('WebUI/MenuPage/lbl_JQueryUIHeader'), 'JQuery UI')
 
-WebUI.click(findTestObject('MenuPage/mnu_Enabled'))
-
-WebUI.delay(1)
-
-WebUI.click(findTestObject('MenuPage/mnu_Download'))
+WebUI.click(findTestObject('WebUI/MenuPage/lnk_MenuLink'))
 
 WebUI.delay(1)
 
-WebUI.click(findTestObject('MenuPage/mnu_CSV'))
+WebUI.verifyElementText(findTestObject('WebUI/General/lbl_Page_Header'), 'JQueryUI - Menu')
+
+WebUI.click(findTestObject('WebUI/MenuPage/mnu_Enabled'))
+
+WebUI.delay(1)
+
+WebUI.click(findTestObject('WebUI/MenuPage/mnu_Download'))
+
+WebUI.delay(1)
+
+WebUI.click(findTestObject('WebUI/MenuPage/mnu_CSV'))
 
 WebUI.delay(5)
 
